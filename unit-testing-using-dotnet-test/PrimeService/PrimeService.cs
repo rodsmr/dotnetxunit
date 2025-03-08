@@ -2,8 +2,10 @@
 
 public class PrimeService
 {
-    public bool IsPrime(int i)
+    public bool IsPrime(int number)
     {
-        throw new NotImplementedException();
+        if (number == 1) return false;
+        
+        throw new NotImplementedException("Not fully implemented.");
     }
 }
