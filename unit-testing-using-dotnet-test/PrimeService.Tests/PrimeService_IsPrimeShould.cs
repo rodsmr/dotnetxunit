@@ -61,4 +61,16 @@ public class PrimeService_IsPrimeShould
         // Assert
         Assert.True(result, "2 should be prime");
     }
+
+    [Fact]
+    public void IsPrime_IsInput3_ReturnTrue()
+    {
+        // Arrange: skip
+        
+        // Act
+        var result = _primeService.IsPrime(3);
+        
+        // Assert
+        Assert.True(result, $"3 should be prime");
+    }
 }
