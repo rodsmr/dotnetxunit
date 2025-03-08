@@ -14,6 +14,8 @@ public class PrimeService
     {
         if (number < 2) return false;
         
+        if (number == 2) return true;
+        
         throw new NotImplementedException("Not fully implemented.");
     }
 }
