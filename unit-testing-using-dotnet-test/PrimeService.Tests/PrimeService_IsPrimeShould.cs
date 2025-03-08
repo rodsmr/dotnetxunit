@@ -48,4 +48,17 @@ public class PrimeService_IsPrimeShould
         // Assert
         Assert.False(result, $"{value} should not be prime");
     }
+    
+    [Fact]
+    public void IsPrime_IsInput2_ReturnTrue()
+    {
+        // Arrange: replaced by the constructor
+        // var primeService = new PrimeService();
+        
+        // Act
+        bool result = _primeService.IsPrime(2);
+        
+        // Assert
+        Assert.True(result, "2 should be prime");
+    }
 }
