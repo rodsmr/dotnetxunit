@@ -15,7 +15,13 @@ public class PrimeService
         if (number < 2) return false;
         
         if (number == 2) return true;
-        
-        throw new NotImplementedException("Not fully implemented.");
+
+        for (var divisor = 2; divisor < number; divisor++)
+        {
+            if (number % divisor == 0)
+                return false;
+        }
+
+        return true;
     }
 }
