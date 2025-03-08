@@ -13,8 +13,6 @@ public class PrimeService
     public bool IsPrime(int number)
     {
         if (number < 2) return false;
-        
-        if (number == 2) return true;
 
         for (var divisor = 2; divisor < number; divisor++)
         {
