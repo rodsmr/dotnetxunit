@@ -35,5 +35,18 @@ namespace FooBarQix.Tests
             // Assert
             Assert.Equal(number.ToString(), result);
         }
+
+        [Fact]
+        public void FooBarQix_IsDivisibleBy5_ShouldBeBar() 
+        {
+            // Arrange
+            FooBarQix fooBarQix = new();
+
+            // Act
+            var result = fooBarQix.Compute("5");
+
+            // Assert
+            Assert.Equal("Bar", result);
+        }
     }
 }
