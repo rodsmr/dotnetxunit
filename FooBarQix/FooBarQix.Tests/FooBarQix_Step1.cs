@@ -7,7 +7,7 @@ namespace FooBarQix.Tests
         [Theory]
         [InlineData(3)]
         [InlineData(6)]
-        [InlineData(0)]
+        [InlineData(9)]
         public void FooBarQix_IsDivisibleBy3_ShouldBeFoo(int number)
         {
             // Arrange
@@ -37,16 +37,33 @@ namespace FooBarQix.Tests
         }
 
         [Fact]
-        public void FooBarQix_IsDivisibleBy5_ShouldBeBar() 
+        public void FooBarQix_IsDivisibleBy5_ShouldBeBar()
         {
             // Arrange
             FooBarQix fooBarQix = new();
 
             // Act
-            var result = fooBarQix.Compute("5");
+            var result = fooBarQix.Compute("20");
 
             // Assert
             Assert.Equal("Bar", result);
+        }
+
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(45)]
+        [InlineData(60)]
+        public void FooBarQix_IsDivisibleBy3And5_ShouldBeFooBar(int number)
+        {
+            // Arrange
+            FooBarQix fooBarQix = new();
+
+            // Act
+            var result = fooBarQix.Compute(number.ToString());
+
+            // Assert
+            Assert.Equal("FooBar", result);
         }
     }
 }

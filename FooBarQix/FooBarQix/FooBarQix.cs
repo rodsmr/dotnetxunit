@@ -13,7 +13,11 @@ namespace FooBarQix
             
             int? number = Convert.ToInt32(item);
 
+            if (number % 3 == 0 && number % 5 == 0) return "FooBar";
+
             if (number % 3 == 0) return "Foo";
+
+            if (number % 5  == 0) return "Bar";
             
             return item;
         }
