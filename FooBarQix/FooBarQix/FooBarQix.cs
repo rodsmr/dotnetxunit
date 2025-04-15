@@ -9,8 +9,13 @@ namespace FooBarQix
     //For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
     public class FooBarQix
     {
-        public string? Compute(string item) { 
-            return "Foo"; 
+        public string? Compute(string item) {
+            
+            int? number = Convert.ToInt32(item);
+
+            if (number % 3 == 0) return "Foo";
+            
+            return "Foo";
         }
     }
 }
