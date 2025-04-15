@@ -15,7 +15,7 @@ namespace FooBarQix
 
             if (number % 3 == 0) return "Foo";
             
-            return "Foo";
+            return item;
         }
     }
 }
